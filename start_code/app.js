@@ -9,9 +9,9 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 // Rendering function
-const render = require("./lib/htmlRenderer");
+// const render = require("./lib/htmlRenderer");
 // Alternative rendering function
-// const render = require("./lib/page-template.js");
+const render = require("./lib/page-template.js");
 
 
 const teamMembers = [];
@@ -20,6 +20,10 @@ const teamMembers = [];
 const idArray = [];
 
 function appMenu() {
+  //create manager first, then the manager will create a team
+  //once manager is created, we will create team by asking the user which type of employee to create
+  //based on the choice, we will create that employee object
+  //loop throu 
 
   function createManager() {
     console.log("Please build your team");
@@ -72,6 +76,7 @@ function appMenu() {
       }
     ]).then(userChoice => {
       switch(userChoice.memberChoice) {
+        //to contain the manager's choicein this .then
       case "Engineer":
         addEngineer();
         break;
