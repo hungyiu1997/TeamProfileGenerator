@@ -1,0 +1,26 @@
+{
+  "name": "teamprofilegenerator",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hungyiu1997/TeamProfileGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hungyiu1997/TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/hungyiu1997/TeamProfileGenerator#readme",
+  "description": "",
+  "dependencies": {
+    "inquirer": "^8.1.3"
+  }
+}

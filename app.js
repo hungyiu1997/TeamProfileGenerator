@@ -40,7 +40,7 @@ function appMenu() {
       },
       {
         type: "input",
-        name: "Manager ID",
+        name: "ID",
         message: "Please enter your manager ID?"
       },
       {
@@ -50,13 +50,13 @@ function appMenu() {
       },
       {
         type: "input",
-        name: "Manager Office Number",
+        name: "OfficeNumber",
         message: "Please enter your Manager Office Number."
       }
     ]).then(answers => {
-      const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+      const manager = new Manager(answers.Name, answers.Id, answers.Email, answers.OfficeNumber);
       teamMembers.push(manager);
-      idArray.push(answers.managerId);
+      idArray.push(answers.Id);
       createTeam();
     });
   }
@@ -112,9 +112,9 @@ function appMenu() {
         message: "Please enter your GitHub username."
       },
     ]).then(answers => {
-      const engineer = new engineer (answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGitHub);
+      const engineer = new Engineer (answers.Name, answers.ID, answers.Email, answers.GitHub);
       teamMembers.push(engineer);
-      idArray.push(engineerID);
+      idArray.push(engineer.ID);
       //
       // YOUR CODE HERE
       // 1. CREATE A VARIABLE TO STORE THE ENGINEER OBJECT INSTANTIATED WITH THE ENGINEER CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS
@@ -150,9 +150,9 @@ function appMenu() {
        message: "Please enter your educational institution."
      },
     ]).then(answers => {
-      const intern = new intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool);
+      const intern = new Intern(answers.Name, answers.ID, answers.Email, answers.School);
       teamMembers.push(intern);
-      idArray.push(internID);
+      idArray.push(intern.ID);
   
       createTeam();
     });
